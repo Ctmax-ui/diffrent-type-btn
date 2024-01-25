@@ -1,0 +1,386 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+.d-flex{
+    display: flex;
+    justify-content: space-between;
+
+}
+.my-2{
+    margin: 2rem 0;
+}
+.p-4{
+    padding: 1rem;
+}
+
+
+
+.border{
+    border: 1px solid #000;
+}
+
+
+
+.bg-red{
+    background-color: #ff0000;
+}
+.bg-greeny{
+    background-color: #adff2f;
+}
+.bg-black{
+    background-color: #000;
+}
+body{
+    background-color: #d4d1d1;
+}
+
+.container{
+    width: 95%;
+    height: auto;
+    margin: auto;
+    background-color: #d4d1d1;
+}
+
+.btn-from-down, .btn-from-up, .btn-from-right, .btn-from-left{
+padding: 15px 40px;
+position: relative;
+background: #fff;
+cursor: pointer;
+transition: all ease .5s;
+overflow: hidden;
+z-index: 2;
+border-radius: 5px;
+}
+.btn-from-down-inside{
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 104%;
+    transition: all ease .5s;
+    z-index: -1;
+    background-color: #000;
+}
+.btn-from-down:hover{
+    color: #fff;
+}
+.btn-from-down:hover .btn-from-down-inside{
+    top: 0;
+}
+
+.btn-from-up-inside{
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: -104%;
+    transition: all ease .5s;
+    z-index: -1;
+    background-color: #000;
+}
+.btn-from-up:hover{
+    color: #fff;
+}
+.btn-from-up:hover .btn-from-up-inside{
+    top: 0;
+}
+
+.btn-from-right-inside{
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    right: 100%;
+    top: 0;
+    transition: all ease .5s;
+    z-index: -1;
+    background-color: #000;
+    color: #000;
+}
+.btn-from-right:hover{
+    color: #fff;
+}
+.btn-from-right:hover .btn-from-right-inside{
+    right: 0;
+}
+
+.btn-from-left-inside{
+    position: absolute;
+    display: inline-block;
+    width: 200%;
+    height: 250%;
+    border-radius: 50% 0 0 50%;
+    left: 100%;
+    top: 0;
+    transition: all ease .8s;
+    z-index: -1;
+    background-color: #000;
+}
+.btn-from-left:hover{
+    color: #fff;
+}
+.btn-from-left:hover .btn-from-left-inside{
+    left: -100%;
+}
+
+/* first btn's end */
+
+.btn-inside-box{
+    padding: 15px 25px;
+    background-color: #fff;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    transition: all ease-in .5s;
+}
+.btn-top-right-inside-anim-box{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all ease .6s;
+    z-index: -1;
+}
+.btn-inside-box:hover{
+    color: #fff;
+}
+.btn-inside-box:hover .btn-top-right-inside-anim-box{
+    width: 100%;
+    height: 100%;
+}
+
+.btn-top-left-inside-anim-box{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all ease .6s;
+    z-index: -1;
+}
+.btn-inside-box:hover .btn-top-left-inside-anim-box{
+    width: 100%;
+    height: 100%;
+}
+
+.btn-bottom-right-inside-anim-box{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: all ease .6s;
+    z-index: -1;
+}
+.btn-inside-box:hover .btn-bottom-right-inside-anim-box{
+    width: 100%;
+    height: 100%;
+}
+
+.btn-bottom-left-inside-anim-box{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all ease .6s;
+    z-index: -1;
+}
+.btn-inside-box:hover .btn-bottom-left-inside-anim-box{
+    width: 100%;
+    height: 100%;
+}
+
+/* second btn end */
+
+.btn-three-box{
+    padding: 15px 25px;
+    background-color: #fff;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+.btn-three-box:hover{
+    color: #fff;
+}
+.btn-three-right-anim-box-one{
+    position: absolute;
+    width: 0;
+    height: 33%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    transition: all linear .3s;
+}
+.btn-three-right-anim-box-two{
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    top: 50%;
+   transform: translateY(-50%);
+    width: 0;
+    height: 50%;
+    transition: all linear .3s;
+}
+.btn-three-right-anim-box-three{
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 34%;
+    transition: all linear .3s;
+}
+.btn-three-box:hover .btn-three-right-anim-box-one, .btn-three-box:hover .btn-three-right-anim-box-three, .btn-three-box:hover .btn-three-right-anim-box-two{
+    width: 100%;
+}
+
+
+.btn-three-left-anim-box-three{
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    top: 0;
+    background-color: #000;
+    width: 0;
+    height: 34%;
+    transition: all .4s ease;
+}
+.btn-three-left-anim-box-two{
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #000;
+    width: 0;
+    height: 34%;
+    transition: all .4s ease;
+}
+.btn-three-left-anim-box-one{
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    width: 0;
+    height: 34%;
+    transition: all .4s ease;
+}
+
+.btn-three-box:hover .btn-three-left-anim-box-three, .btn-three-box:hover .btn-three-left-anim-box-two, .btn-three-box:hover .btn-three-left-anim-box-one{
+    width: 100%;
+}
+
+
+/* fourth section  */
+
+.btn-cutter{
+    padding: 15px 25px;
+    position: relative;
+    z-index: 2;
+    background: #fff;
+    box-shadow: 5px 5px 1px 2px #000000f1;
+    cursor: pointer;
+    transition: all linear .2s;
+    overflow: hidden;
+}
+.btn-inside-cutter{
+    position: absolute;
+    z-index: -1;
+    top: 150%;
+    left: 70%;
+    width: 200%;
+    height: 400%;
+    transform: rotateZ(45deg);
+    background-color: #000000;
+    transition: all linear .2s;
+    border-radius: 20px 0 0 0 0;
+}
+.btn-cutter:hover{
+    color: #fff;
+    box-shadow: none;
+}
+.btn-cutter:hover .btn-inside-cutter{
+    top: -90%;
+    left: 0;
+}
+
+
+
+.btn-shutter{
+    padding: 15px 25px;
+    position: relative;
+    z-index: 2;
+    background: #fff;
+    box-shadow: 5px 5px 1px 2px #000000f1;
+    cursor: pointer;
+    transition: all linear .2s;
+    overflow: hidden;
+}
+.btn-inside-shutter-one, .btn-inside-shutter-two{
+    position: absolute;
+    z-index: -1;
+    width: 100px;
+    height: 200px;
+    transform: rotateZ(45deg);
+    background-color: #000000;
+    transition: all linear .2s;
+}
+.btn-inside-shutter-one{
+    top: -100%;
+    left: 130%;
+}
+.btn-inside-shutter-two{
+    bottom: -100%;
+    right: 130%;
+}
+.btn-shutter:hover{
+    color: #fff;
+    box-shadow: none;
+}
+.btn-shutter:hover .btn-inside-shutter-one{
+    left: 45%;
+}
+.btn-shutter:hover .btn-inside-shutter-two{
+    right: 45%;
+}
+
+
+
+.btn-arrow{
+    padding: 15px calc(25px + 25px);
+    position: relative;
+    z-index: 2;
+    background: #fff;
+    cursor: pointer;
+    transition: all linear .2s;
+    overflow: hidden;
+
+}
+.btn-inside-arrow{
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    background-color: #000000;
+    transition: all linear .2s;
+    bottom: 0;
+    left: 105%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.btn-arrow:hover .btn-inside-arrow{
+    left: 80%;
+}
